@@ -1,10 +1,6 @@
 {
     "id": "String",
     "commonName": "String",
-    "plantType": "String",
-    "sunlight": "String",
-    "waterNeeds": "String",
-
     "attributes": [
         { "key": "key", "value": "value"}
     ]
