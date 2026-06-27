@@ -1,7 +1,11 @@
 {
     "id": "String",
-    "commonName": "String",
-    "attributes": [
-        { "key": "key", "value": "value"}
-    ]
+    "common_name": "String",
+    "scientific_name": "String",
+    "type": "String",
+    "origin": "String",
+    "watering": "String",
+    "maintenance": "String",
+    "cycle": "String",
+    "growth_rate": "String"
 }

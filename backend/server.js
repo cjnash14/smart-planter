@@ -9,36 +9,36 @@ app.use(express.json());
 const plants = [
   {
     id: "1",
-    commonName: "White Oak",
-    attributes: {
-        plantType: "Tree",
-        sunlight: "high",
-        waterNeeds: "medium",
-        maxHeightCm: "2133",
-        maxWidthCm: "1982"
-    }
+    common_name: "White Oak",
+    scientific_name: "Quercus alba",
+    type: "Tree",
+    origin: "Eastern and Central North America",
+    watering: "Moderate",
+    maintenance: "Low",
+    cycle: "Perennial",
+    growth_rate: "Slow"
   },
   {
     id: "2",
-    commonName: "Osage orange",
-    attributes: {
-        plantType: "Tree",
-        sunlight: "medium",
-        waterNeeds: "low",
-        maxHeightCm: "1219",
-        maxWidthCm: "914"
-    }
+    common_name: "Osage orange",
+    scientific_name: "Maclura pomifera",
+    type: "Tree",
+    origin: "Central and Southern United States",
+    watering: "Low",
+    maintenance: "Low",
+    cycle: "Perennial",
+    growth_rate: "Medium"
   },
   {
     id: "3",
-    commonName: "Peace rose",
-    attributes: {
-        plantType: "Shrub",
-        sunlight: "high",
-        waterNeeds: "medium",
-        maxHeightCm: "150",
-        maxWidthCm: "105"
-    }
+    common_name: "Peace rose",
+    scientific_name: "Rosa 'Madame A. Meilland'",
+    type: "Shrub",
+    origin: "France",
+    watering: "Moderate",
+    maintenance: "Low",
+    cycle: "Perennial",
+    growth_rate: "Fast"
   }
 ]
 
@@ -51,7 +51,7 @@ app.get("/plants", (req, res) => {
 
   const filteredPlants = plants.filter((plant) => {
     return Object.entries(filters).every(([key, value]) => {
-      return plant.attributes[key] == value;
+      return plant[key] == value;
     })
   })
 
